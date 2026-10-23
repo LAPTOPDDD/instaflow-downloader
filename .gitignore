@@ -1,0 +1,18 @@
+# Packaged extension files
+*.zip
+*.crx
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log

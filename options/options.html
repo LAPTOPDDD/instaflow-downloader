@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Настройки InstaFlow</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="page">
+      <header class="hero">
+        <div class="brand">
+          <img src="../assets/logo.svg" width="64" height="64" alt="">
+          <div>
+            <span class="kicker">INSTAFLOW</span>
+            <h1>Настройки</h1>
+            <p>Настройте папки и имена файлов под себя.</p>
+          </div>
+        </div>
+        <div class="save-state" id="saveState"><span></span>Все изменения сохранены</div>
+      </header>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3.5 7.5h6l2 2h9v8.75A2.75 2.75 0 0 1 17.75 21H6.25a2.75 2.75 0 0 1-2.75-2.75V7.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M3.5 7.5V6.75A2.75 2.75 0 0 1 6.25 4h3l2 2h6.5a2.75 2.75 0 0 1 2.75 2.75v.75" stroke="currentColor" stroke-width="1.7"/>
+            </svg>
+          </div>
+          <div><h2>Организация файлов</h2><p>Chrome сохраняет файлы внутри стандартной папки «Загрузки».</p></div>
+        </div>
+
+        <label class="field">
+          <span>Корневая папка</span>
+          <div class="input-wrap"><span>Загрузки /</span><input id="rootFolder" type="text" maxlength="120" placeholder="Instagram" autocomplete="off"></div>
+          <small>Для вложенных папок используйте косую черту, например <code>Медиа/Instagram</code>.</small>
+        </label>
+
+        <div class="preview">
+          <span>Пример пути</span>
+          <strong id="pathPreview">Загрузки/Instagram/nasa/2026-10-23_ABC123_video.mp4</strong>
+        </div>
+
+        <div class="option-list">
+          <label class="option-row">
+            <span class="option-copy"><strong>Отдельная папка для публикации</strong><small>Создавать подпапку с кодом каждого поста</small></span>
+            <input id="groupByPost" type="checkbox"><span class="toggle" aria-hidden="true"><span></span></span>
+          </label>
+          <label class="option-row">
+            <span class="option-copy"><strong>Дата в имени файла</strong><small>Удобно для сортировки по времени</small></span>
+            <input id="includeDate" type="checkbox"><span class="toggle" aria-hidden="true"><span></span></span>
+          </label>
+          <label class="option-row">
+            <span class="option-copy"><strong>Кнопки на публикациях</strong><small>Показывать кнопку скачивания прямо в Instagram</small></span>
+            <input id="showInlineButtons" type="checkbox"><span class="toggle" aria-hidden="true"><span></span></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="note">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <p><strong>Почему нельзя выбрать любую папку?</strong> Из соображений безопасности Chrome разрешает расширениям автоматически сохранять только внутри вашей папки «Загрузки».</p>
+      </section>
+
+      <footer>
+        <button class="reset-button" id="resetButton" type="button">Вернуть настройки по умолчанию</button>
+        <span>Версия 1.0.0 · данные не покидают браузер</span>
+      </footer>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
